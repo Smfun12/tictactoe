@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TicTacToe</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+
+<div id="title">Tic Tac Toe</div>
+<div class="setupButtons">
+	<label for="rows">Rows</label>
+	<input type="num" id="rows" value="3">
+	<label for="columns">Columns</label>
+	<input type="num" id="columns" value="3">
+	<label for="winCells">Cells to win</label>
+	<input type="num" id="winCells" value="3">
+	<br>
+	<label for="player1Color">First player's color</label>
+	<input type="color" id="player1Color" value="#e66465">
+	<label for="player2Color">Second player's color</label>
+	<input type="color" id="player2Color" value="#f6b73c">
+	<br>
+	<button id="submitButton" onclick="setGameBoard()">Submit</button>
+	<button id="reset" onclick="resetGame()">Reset</button>
+</div>
+<div id="field">
+	
+</div>
+
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

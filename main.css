@@ -1,0 +1,121 @@
+body{
+	/*background-image: url('https://cdn.statically.io/img/www.pixelstalk.net/wp-content/uploads/2016/08/Outer-Space-Planets-Blue-1080p-Wallpaper.jpg');*/
+
+}
+#title{
+	text-align: center;
+	font-size: 35px;
+	font-size: 72px;
+  	background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(101,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.setupButtons{
+	text-align: center;
+	font-size: 25px;
+	margin-top: 20px;
+}
+
+#field{
+	text-align: center;
+	font-size: 0;
+	margin-top: 20px;
+}
+label{
+	color: #F29F2D;
+	font-weight: bold;
+}
+
+#rows{
+	font-size: 25px;
+	width: 40px;
+	border: 2px solid lightblue;
+  	border-radius: 4px;
+}
+#columns{
+	font-size: 25px;
+	width: 40px;
+	border: 2px solid lightblue;
+  	border-radius: 4px;
+}
+#winCells{
+	font-size: 25px;
+	width: 40px;
+	border: 2px solid lightblue;
+  	border-radius: 4px;
+}
+.row{
+	display: block;
+}
+.row div{
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	border: 1px solid black;
+	font-size: 10px;
+}
+.cell{
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	border: 1px solid black;
+	font-size: 10px;
+	border-radius: 5px;
+}
+.cell span{
+	margin: 0;
+	padding: 0;
+}
+
+.cell:hover{
+	background-color: #DCA674;
+}
+
+
+#submitButton{
+	
+  	border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #74A2DC;
+    text-align: center;
+    cursor: pointer;
+    width: 100px;
+    font-size: 18px;
+    margin-top: 15px;
+  	border-radius: 5px;
+  	
+}
+
+#submitButton:hover{
+    transition: background-color 1s ease-out;
+    background: #50cd1a;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  #submitButton:active{
+    transform: translateY(2px);
+  }
+
+#reset{
+border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #74A2DC;
+    text-align: center;
+    cursor: pointer;
+    width: 100px;
+    font-size: 18px;
+    margin-bottom: 5px;
+  	border-radius: 5px;
+}
+#reset:hover{
+    transition: background-color 1s ease-out;
+    background: #50cd1a;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  #reset:active{
+    transform: translateY(2px);
+  }
