@@ -88,7 +88,7 @@ function initBoard(row, column){
 	fillBoarsdWithZeros();
 	let board = document.getElementById("field");
 	for (let i = 0; i < row; i++){
-		let row = document.createElement("row");
+		let row = document.createElement("div");
 		row.className = 'row';
 		for (let j = 0; j < column;j++){
 			let newDiv = document.createElement("div");
@@ -105,6 +105,7 @@ function initBoard(row, column){
 				}
 				if (player1.turn){
 				// this.appendChild(firstPlayer);
+				// this.innerHTML = 'X';
 				this.style.background = player1.color;
 				gameField[id[0]][id[1]] = 1;
 				rows[id[0]] = 1;
@@ -164,20 +165,50 @@ function checkWinner(player, x, y){
 	// console.log(startRowCell,startColumnCell,finishRowCell,finishColumnCell);
 	
 	checkRow(player, startRowCell, finishRowCell,x);
+	if (!endGame){
 	checkColumn(player, startColumnCell, finishColumnCell, y);
+	}
+	if (!endGame){
 	checkLeftToRightDiagonal(player, x,y);
+	}
+	if (!endGame){
 	checkRightToLeftDiagonal(player, x,y);
+	}
+	if (endGame){
+		alert('Total score: \n' + player1.wins + " : " + player2.wins);
+		resetBoard();
+	}
 	localStorage.setItem("1",JSON.stringify(player1));
 	localStorage.setItem("2",JSON.stringify(player2));
 
 }
 
-function resetGame(){
+function resetBoard(){
 	setGameBoard();
 	endGame = false;
 	player1.turn = true;
 	player2.turn = false;
 
+}
+
+function resetScore(){
+	setGameBoard();
+	endGame = false;
+	player1.turn = true;
+	player2.turn = false;
+	player1.wins = 0;
+	player1.losses = 0;
+	player2.wins = 0;
+	player2.losses = 0;
+	localStorage.setItem("1",JSON.stringify(player1));
+	localStorage.setItem("2",JSON.stringify(player2));
+	alert('Successful!\n' +
+		'Total score: \n' + player1.wins + " : " + player2.wins);
+
+}
+
+function seeStats(){
+	alert('Total score: \n' + player1.wins + " : " + player2.wins);
 }
 
 function checkRow(player, startCell, finishCell, x){

@@ -49,10 +49,6 @@ label{
 	display: block;
 }
 .row div{
-	width: 40px;
-	height: 40px;
-	display: inline-block;
-	border: 1px solid black;
 	font-size: 10px;
 }
 .cell{
@@ -98,24 +94,38 @@ label{
     transform: translateY(2px);
   }
 
-#reset{
-border: none;
+#resetBoard,#resetScore{
+    border: none;
     outline: 0;
     padding: 12px;
     color: white;
     background-color: #74A2DC;
     text-align: center;
     cursor: pointer;
-    width: 100px;
+    width: 140px;
     font-size: 18px;
     margin-bottom: 5px;
   	border-radius: 5px;
 }
-#reset:hover{
+#resetBoard:hover,#resetScore:hover,#seeStats:hover{
     transition: background-color 1s ease-out;
     background: #50cd1a;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
-  #reset:active{
+  #resetBoard:active,#resetScore:active,#seeStats:active{
     transform: translateY(2px);
+  }
+
+  #seeStats{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #74A2DC;
+    text-align: center;
+    cursor: pointer;
+    width: 160px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    border-radius: 5px;
   }
