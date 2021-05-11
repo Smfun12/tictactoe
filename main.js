@@ -192,7 +192,6 @@ function resetBoard(){
 }
 
 function resetScore(){
-	setGameBoard();
 	endGame = false;
 	player1.turn = true;
 	player2.turn = false;
